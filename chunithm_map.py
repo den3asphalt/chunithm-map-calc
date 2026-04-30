@@ -415,7 +415,7 @@ if __name__ == "__main__":
                 months_in_span.append(curr.month)
             curr += datetime.timedelta(days=1)
 
-        songs_input = input("\n通っている店舗の曲数設定を入力してください (3または4) [未入力: 4]: ").strip()
+        songs_input = input("\n曲数設定を入力してください (3または4) [未入力: 4]: ").strip()
         base_songs = int(songs_input) if songs_input in ['3', '4'] else 4
 
         tp_quotas = {}

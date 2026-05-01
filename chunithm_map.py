@@ -466,17 +466,17 @@ if __name__ == "__main__":
 
         print("\n曜日を数字で指定してください (0:月, 1:火, 2:水, 3:木, 4:金, 5:土, 6:日)")
         
-        exp_wd_input = input("「EXP 1.5倍」の曜日をカンマ区切りで入力 (-1でなし) [未入力: 0,2]: ").strip()
+        exp_wd_input = input("「EXP 1.5倍」の曜日をカンマ区切りで入力 (-1でなし) [未入力: 1,4]: ").strip()
         if not exp_wd_input:
-            exp_weekdays = [0, 2]
+            exp_weekdays = [1,4]
         elif exp_wd_input == "-1":
             exp_weekdays = []
         else:
             exp_weekdays = [int(x.strip()) for x in exp_wd_input.split(',')]
 
-        map_wd_input = input("「マップ +2」の曜日をカンマ区切りで入力 (-1でなし) [未入力: 1,4]: ").strip()
+        map_wd_input = input("「マップ +2」の曜日をカンマ区切りで入力 (-1でなし) [未入力: 3,6]: ").strip()
         if not map_wd_input:
-            map_weekdays = [1, 4]
+            map_weekdays = [3, 6]
         elif map_wd_input == "-1":
             map_weekdays = []
         else:
@@ -512,4 +512,4 @@ if __name__ == "__main__":
         optimizer.solve(days_info, status)
 
     except Exception as e:
-        print(f"\nエラーが発生しました。入力形式が正しいか確認してください。詳細: {e}")
+        print(f"\nエラーが発生しました。入力形式が正しいか確認してください。詳細: {e}")
